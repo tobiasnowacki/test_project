@@ -1,6 +1,10 @@
 \documentclass[12pt]{article}
 \input{header}
-\usepackage{threeparttable}
+
+\usepackage{biblatex}
+\addbibresource{UKCareers.bib}
+
+\usepackage[]{booktabs}
 
 \setlength\labelsep{0pt}
 
@@ -24,7 +28,39 @@ Cars with more horsepower also consume more fuel.
 
 \section{Evidence}
 
+\parencite[][]{eggers2014a}
+
+\subsection{Tables are great}
+
+\begin{table}[tb]
+    \caption{This is my main evidence}
+    \label{tab:tablename}
+    \centering
+
+    \begin{tabular}{lcc}
+    \toprule
+    \textbf{column 1} & \textbf{column 2} & \textbf{column 3} \\
+    \hline
+        24 & 37.4 & -100.8 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
 The following figure shows this:
+
+\begin{equation}
+\label{eq:integral}
+\int_a^b = x^2 dx
+\end{equation}
+
+As we see per Equation \ref{eq:integral}
+
+
+$lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} = f'(x)$
+
+
+Hello. My name is toby. I don't know what I'm doing.
+
 
 \begin{figure}[tb]
   \centering
@@ -32,6 +68,8 @@ The following figure shows this:
   \caption{Sample of cars with their horse power and fuel efficiency.}
   \label{fig:figure1}
 \end{figure}
+
+\printbibliography
 
 
 \end{document}
